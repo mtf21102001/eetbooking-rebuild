@@ -22,8 +22,5 @@ class AppServiceProvider extends ServiceProvider
         if (\Illuminate\Support\Str::contains(config('app.url'), 'https://')) {
             \Illuminate\Support\Facades\URL::forceScheme('https');
         }
-        if ($this->app->environment('production')) {
-            \Illuminate\Support\Facades\URL::forceScheme('https');
-        }
     }
 }
