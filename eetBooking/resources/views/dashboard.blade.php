@@ -17,17 +17,7 @@
                   <p class="text-gray-500 font-medium">Manage your bookings and account settings.</p>
                </div>
           </div>
-           <div class="flex gap-3">
-             <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="px-6 py-3 bg-red-50 text-red-600 font-bold rounded-2xl hover:bg-red-100 transition flex items-center gap-2">
-                    <i class="fa-solid fa-right-from-bracket"></i> Logout
-                </button>
-             </form>
-            <a href="{{ route('home') }}" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 flex items-center gap-2">
-                <i class="fa-solid fa-plus"></i> New Trip
-            </a>
-          </div>
+           
       </div>
 
       <div class="flex flex-col lg:flex-row gap-8">

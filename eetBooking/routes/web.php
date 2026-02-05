@@ -35,6 +35,7 @@ Route::post('/packages/custom', [CustomPackageController::class, 'store'])->name
 Route::get('/packages/{package}', [PackageController::class, 'show'])->name('packages.show');
 
 // Flights (Public Leads)
+Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
 Route::post('/flights/book', [FlightController::class, 'store'])->name('flights.book');
 Route::get('/flights/success/{reference}', [FlightController::class, 'success'])->name('flights.success');
 Route::get('/transfers', [FlightController::class, 'transfers'])->name('transfers.index');

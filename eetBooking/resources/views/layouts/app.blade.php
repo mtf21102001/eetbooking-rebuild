@@ -25,7 +25,7 @@
 
     {{-- Add padding top to account for fixed navbar (h-20 = 5rem, so pt-20 or pt-24 is good) --}}
     <!-- Page Content -->
-    <main class="pt-20">
+    <main class="pt-16">
         @yield('content')
     </main>
 

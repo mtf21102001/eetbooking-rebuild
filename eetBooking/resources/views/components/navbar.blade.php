@@ -6,7 +6,7 @@
             this.scrolled = window.pageYOffset > 20;
         });
     }
-}" :class="{ 'bg-white/90 backdrop-blur-md shadow-md py-2': scrolled, 'bg-white py-4': !scrolled }"
+}" :class="{ 'bg-white/90 backdrop-blur-md shadow-md py-1': scrolled, 'bg-white py-2': !scrolled }"
   class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-gray-100/50">
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,8 @@
               class="flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition group/item">
               <span
                 class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition">
-                <i class="fa-solid fa-pyramid"></i>
+                {{-- <i class="fa-solid fa-pyramid"></i> --}}
+                <i class="fa-solid fa-plane"></i>
               </span>
               Egypt Packages
             </a>
@@ -89,7 +90,7 @@
         <div class="relative group" x-data="{ servicesOpen: false }" @mouseenter="servicesOpen = true"
           @mouseleave="servicesOpen = false">
           <button
-            class="flex items-center gap-1 text-sm font-bold transition py-2 {{ request()->routeIs('transfers.*') || request()->routeIs('visas.*') ? 'text-blue-600' : 'text-gray-600 group-hover:text-blue-600' }}">
+            class="flex items-center gap-1 text-sm font-bold transition py-2 {{ request()->routeIs('transfers.*') || request()->routeIs('visas.*') || request()->routeIs('flights.index') ? 'text-blue-600' : 'text-gray-600 group-hover:text-blue-600' }}">
             Services
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
               :class="{ 'rotate-180': servicesOpen }"></i>
@@ -114,8 +115,8 @@
               class="block px-4 py-2.5 text-sm font-medium {{ request()->routeIs('visas.*') ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600' }} transition">
               <i class="fa-solid fa-passport mr-2 text-gray-400"></i> Travel Visa
             </a>
-            <a href="#flights"
-              class="block px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition">
+            <a href="{{ route('flights.index') }}"
+              class="block px-4 py-2.5 text-sm font-medium {{ request()->routeIs('flights.index') ? 'text-purple-600 bg-purple-50' : 'text-gray-700 hover:bg-purple-50 hover:text-purple-600' }} transition">
               <i class="fa-solid fa-plane mr-2 text-gray-400"></i> Flight Ticket
             </a>
           </div>
@@ -236,7 +237,7 @@
         {{-- Mobile Services Dropdown --}}
         <div x-data="{ mobileServicesOpen: false }">
           <button @click="mobileServicesOpen = !mobileServicesOpen"
-            class="w-full text-left px-4 py-3 text-base font-bold transition rounded-lg mx-2 flex items-center justify-between {{ request()->routeIs('transfers.*') || request()->routeIs('visas.*') ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' }}">
+            class="w-full text-left px-4 py-3 text-base font-bold transition rounded-lg mx-2 flex items-center justify-between {{ request()->routeIs('transfers.*') || request()->routeIs('visas.*') || request()->routeIs('flights.index') ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' }}">
             Services
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"
               :class="{ 'rotate-180': mobileServicesOpen }"></i>
@@ -254,8 +255,8 @@
               class="block px-4 py-2 text-sm font-medium transition {{ request()->routeIs('visas.*') ? 'text-purple-600 bg-purple-100 rounded' : 'text-gray-600 hover:text-purple-600' }}">
               <i class="fa-solid fa-passport w-5 text-center mr-2"></i> Travel Visa
             </a>
-            <a href="#flights"
-              class="block px-4 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition">
+            <a href="{{ route('flights.index') }}"
+              class="block px-4 py-2 text-sm font-medium transition {{ request()->routeIs('flights.index') ? 'text-purple-600 bg-purple-100 rounded' : 'text-gray-600 hover:text-purple-600' }}">
               <i class="fa-solid fa-plane w-5 text-center mr-2"></i> Flight Ticket
             </a>
           </div>
