@@ -14,7 +14,8 @@
       {{-- Column 1: About & Social --}}
       <div class="space-y-6">
         <a href="{{ route('home') }}" class="flex items-center gap-2">
-          <img src="{{ asset('logo.png') }}" alt="Egypt Express Travel" class="h-12 w-auto brightness-1">
+          <img src="https://egyptexpresstvl.com/wp-content/uploads/2024/11/logo_black-1.png" alt="Egypt Express Travel"
+            class="h-12 w-auto brightness-1">
         </a>
         <p class="text-gray-400 text-sm leading-relaxed">
           Explore the wonders of Egypt with us. We provide premium travel experiences, from historical tours to relaxing

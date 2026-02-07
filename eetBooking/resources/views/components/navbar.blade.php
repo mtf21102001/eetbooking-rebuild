@@ -16,8 +16,8 @@
       {{-- Logo Area --}}
       <div class="flex-shrink-0 flex items-center gap-3">
         <a href="{{ route('home') }}" class="flex items-center gap-2 group">
-          <img src="{{ asset('logo.png') }}" alt="Egypt Express Travel" class="w-auto transition-all duration-300"
-            :class="{ 'h-8': scrolled, 'h-10': !scrolled }">
+          <img src="https://egyptexpresstvl.com/wp-content/uploads/2024/11/logo_black-1.png" alt="Egypt Express Travel" class="w-auto transition-all duration-300"
+            :class="{ 'h-8': scrolled, 'h-10' : !scrolled }">
         </a>
       </div>
 
