@@ -103,7 +103,7 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
         <div class="mb-8 transform hover:scale-105 transition-transform duration-300">
             <a href="/">
-                <x-application-logo class="w-24 h-24 fill-current text-white drop-shadow-2xl" />
+                <x-application-logo class="w-30 h-32 fill-current text-white drop-shadow-2xl" />
             </a>
         </div>
 
