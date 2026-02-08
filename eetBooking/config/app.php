@@ -14,6 +14,7 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+    'admin_email_filament' => env('ADMIN_EMAIL_FILAMENT', 'admin@eetbooking.com'),
 
     /*
     |--------------------------------------------------------------------------

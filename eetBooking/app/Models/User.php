@@ -15,7 +15,7 @@ class User extends Authenticatable implements FilamentUser
     use HasFactory, Notifiable;
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->email === 'admin@eetbooking.com';
+        return $this->email === config('app.admin_email_filament');
     }
 
     /**

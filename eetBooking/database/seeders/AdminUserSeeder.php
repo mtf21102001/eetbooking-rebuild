@@ -15,7 +15,7 @@ class AdminUserSeeder extends Seeder
   {
     User::create([
       'name' => 'Admin User',
-      'email' => 'admin@eetbooking.com',
+      'email' => config('app.admin_email_filament'),
       'password' => Hash::make('password'),
     ]);
   }
